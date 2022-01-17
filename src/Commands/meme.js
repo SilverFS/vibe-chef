@@ -1,7 +1,6 @@
 const Command = require('../Structures/Command.js');
 const request = require('request');
-const random = require('random');
-const { StoreChannel } = require('discord.js');
+const config = require('../Data/config.json');
 
 module.exports = new Command({
     name: 'meme',
@@ -14,7 +13,7 @@ module.exports = new Command({
         const amount = args[1];
         maxfile = 381;
         randomfile = Math.floor(Math.random() * 381);
-        url = 'https://shiruvaaa.net/videos/'
+        url = config['meme-location']
 
 
 
