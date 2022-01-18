@@ -8,7 +8,6 @@ module.exports = new Event("messageCreate", (client, message) => {
     if (message.author.bot) return;
 
     if (!message.content.startsWith(client.prefix)) return;
-
     // Defines an argument of a command
     const args = message.content.substring(client.prefix.length).split(/ +/);
 
@@ -16,7 +15,8 @@ module.exports = new Event("messageCreate", (client, message) => {
     const command = client.commands.find(cmd => cmd.name == args[0]);
 
     // Returns a reply if the command is not recognized
-    if (!command) return message.reply(`*${args[0]}* is not a command I vibe with!`)
+    if (!args[0]) return;
+    if (!command) return message.reply(`*${args[0]}* is not a command I vibe with!`);
 
     const permission = message.member.permissions.has(command.permission, true); // , true
 
