@@ -1,5 +1,6 @@
 {
-    "token": "tokenexample123",
+    "token": "TokenExample123",
     "prefix": "!"
-    "meme-location": "https://bruh.net/"
+    "file-web-address": "https://bruh.lol/videos/",
+    "file-location": "Z:\\videos"
 }
