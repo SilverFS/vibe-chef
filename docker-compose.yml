@@ -2,4 +2,8 @@ version: '3.8'
 services: 
     the-vibe-chef:
         build: ./
-        restart: unless-stopped         
+        restart: unless-stopped
+        volumes:
+          # Video Source 
+          - /mnt/sdb/memes:/assets/videos
+    

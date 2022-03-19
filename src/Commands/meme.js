@@ -13,7 +13,8 @@ module.exports = new Command({
         // First argument after command
         var amount = args[1];
         //Filecount and web-address for access
-        const dir = config['file-location'];
+        //const dir = config['file-location'];
+        const dir = './src/assets/videos';
         url = config['file-web-address'];
         const filecount = fs.readdirSync(dir).length;
         
