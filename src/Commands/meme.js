@@ -1,5 +1,7 @@
 const Command = require('../Structures/Command.js');
 const config = require('../Data/config.json');
+const fs = require('fs');
+
 
 module.exports = new Command({
     name: 'meme',
@@ -10,12 +12,17 @@ module.exports = new Command({
     async run(message, args="", client) {
         // First argument after command
         var amount = args[1];
+        //Filecount and web-address for access
+        const dir = config['file-location'];
+        url = config['file-web-address'];
+        const filecount = fs.readdirSync(dir).length;
         
-        url = config['meme-location'];
-        var maxNumber = 381
-        randomfile = Math.floor(Math.random() * maxNumber);
-        if (!amount || isNaN(amount)) return message.channel.send(`${url + randomfile}.mp4`);       
-        if (amount > maxNumber || amount < 1) return message.channel.send(`Try a number between 1 and ${maxNumber + 1}`)
-        if (amount <= maxNumber) return message.channel.send(`${url + amount}.mp4`);      
+        randomfile = Math.floor(Math.random() * filecount);
+        //Random insert
+        if (!amount || isNaN(amount)) return message.channel.send(`${url + randomfile}.mp4`);
+        //Invalid arg    
+        if (amount > filecount || amount < 1) return message.channel.send(`Try a number __between__ 1 and ${filecount + 1}`)
+        //Specific insert
+        if (amount <= filecount) return message.channel.send(`${url + amount}.mp4`);      
     }
 });
