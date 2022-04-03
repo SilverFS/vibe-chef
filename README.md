@@ -1,6 +1,6 @@
 # The Vibe Chef
 
-![](https://img.shields.io/github/issues/s2-db02/s2-webextension) ![](https://img.shields.io/github/last-commit/s2-db02/s2-webextension) ![](https://img.shields.io/github/license/SilverFS/vibe-chef) 
+![](https://img.shields.io/github/issues/SilverFS/vibe-chef) ![](https://img.shields.io/github/last-commit/SilverFS/vibe-chef) ![](https://img.shields.io/github/license/SilverFS/vibe-chef) 
 
 
 The Vibe Chef is a Discord bot written in [Discord.JS](https://discord.js.org) for the purpose of learning JavaScript and developing a new Discord bot with another language (I used to use Discord.py). 
@@ -25,7 +25,6 @@ The Vibe Chef is a Discord bot written in [Discord.JS](https://discord.js.org) f
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://github.com/SilverFS/vibe-chef/blob/master/LICENSE)
